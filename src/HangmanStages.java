@@ -1,8 +1,8 @@
 public class HangmanStages {
 
-    public static final char a = 92;
+    public final char a = 92;
 
-    public static void stage1() {
+    public void stage1() {
         System.out.println("XXXXXXX        ");
         System.out.println("X     X        ");
         System.out.println("X    ___       ");
@@ -17,7 +17,7 @@ public class HangmanStages {
         System.out.println("X              ");
     }
 
-    public static void stage2() {
+    public void stage2() {
         System.out.println("XXXXXXX        ");
         System.out.println("X     X        ");
         System.out.println("X    ___       ");
@@ -32,7 +32,7 @@ public class HangmanStages {
         System.out.println("X              ");
     }
 
-    public static void stage3() {
+    public void stage3() {
         System.out.println("XXXXXXX        ");
         System.out.println("X     X        ");
         System.out.println("X    ___       ");
@@ -47,7 +47,7 @@ public class HangmanStages {
         System.out.println("X              ");
     }
 
-    public static void stage4() {
+    public void stage4() {
         System.out.println("XXXXXXX        ");
         System.out.println("X     X        ");
         System.out.println("X    ___       ");
@@ -62,7 +62,7 @@ public class HangmanStages {
         System.out.println("X              ");
     }
 
-    public static void stage5() {
+    public void stage5() {
         System.out.println("XXXXXXX        ");
         System.out.println("X     X        ");
         System.out.println("X    ___       ");
@@ -77,7 +77,7 @@ public class HangmanStages {
         System.out.println("X              ");
     }
 
-    public static void stage6() {
+    public void stage6() {
         System.out.println("XXXXXXX        ");
         System.out.println("X     X        ");
         System.out.println("X    ___       ");
@@ -92,7 +92,7 @@ public class HangmanStages {
         System.out.println("X              ");
     }
 
-    public static void stage7() {
+    public void stage7() {
         System.out.println("XXXXXXX        ");
         System.out.println("X     X        ");
         System.out.println("X    ___  "+a+"");
@@ -107,7 +107,7 @@ public class HangmanStages {
         System.out.println("X              ");
     }
 
-    public static void stage8() {
+    public void stage8() {
         System.out.println("XXXXXXX        ");
         System.out.println("X     X        ");
         System.out.println("X /  ___  "+a);
