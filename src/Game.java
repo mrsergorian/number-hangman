@@ -67,6 +67,7 @@ public class Game {
         String playAgain = (new Scanner(System.in)).nextLine();
 
         if (playAgain.equals("YES") || playAgain.equals("Y") || playAgain.equals("yes") || playAgain.equals("y")) {
+            running = true;
             guessAmount = 9;
             numbersUsed = "";
             run();
