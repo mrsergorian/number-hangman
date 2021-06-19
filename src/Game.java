@@ -2,29 +2,36 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-
-    public boolean running = true;
-    public int guess = 0;
-    public int number = 0;
-    public String numbersUsed = "";
-    public int guessAmount = 9;
+	
+	// global variables
+    public boolean running		 = true;
+    public int guess			 = 0;
+    public int number			 = 0;
+    public String numbersUsed	 = "";
+    public int guessAmount		 = 9;
 
     HangmanStages hangmanStages = new HangmanStages();
 
+	// methods
+	
+	// create a random number
     public void createNumber() {
         Random random = new Random();
         number = random.nextInt(100);
     }
-
+	
+	// take input from the console 
     public void takeGuess() {
         guess = (new Scanner(System.in)).nextInt();
     }
-
+	
+	// to show the numbers that were already used
     public void showUsedNumbers() {
         System.out.println("HERE ARE THE NUMBERS YOU USED:\n" + numbersUsed);
         System.out.println();
     }
-
+	
+	// draw the hangman
     public void loadHangmanStage() {
         switch (guessAmount) {
             case 8:
@@ -61,25 +68,35 @@ public class Game {
                 break;
         }
     }
-
+	
+	// to play again or not?
     public void playAgain() {
         System.out.print("WANT ANOTHER NUMBER? ");
         String playAgain = (new Scanner(System.in)).nextLine();
 
-        if (playAgain.equals("YES") || playAgain.equals("Y") || playAgain.equals("yes") || playAgain.equals("y")) {
+        if (playAgain.equals("YES") || 
+			playAgain.equals("Y") || 
+			playAgain.equals("yes") || 
+			playAgain.equals("y")) {
+
             running = true;
             guessAmount = 9;
             numbersUsed = "";
             run();
-        } else {
+        } else if (playAgain.equals("NO") || 
+				   playAgain.equals("no") || 
+				   playAgain.equals("n")  || 
+				   playAgain.equals("N")){
 
             running = false;
             System.out.println("IT'S BEEN FUN! BYE FOR NOW.");
-        }
+        } else {
+			System.out.println("?");
+		}
 
     }
 
-
+	// to check the input from the console
     public void checkGuess() {
         if (guess == number) {
             running = false;
@@ -97,12 +114,13 @@ public class Game {
         }
     }
 
+	// the method that runs the whole game
     public void run() {
         System.out.println("    HANGMAN     ");
         System.out.println("\n\n");
         createNumber();
 
-        while (running && guessAmount != 0) {
+        while (running && guessAmount != 0) { // the main game loop
             showUsedNumbers();
 
             System.out.print("WHAT IS YOUR GUESS? ");
