@@ -1,3 +1,3 @@
 # hangman-v.2
 
-A simple hangman written in Java.
+A simple console hangman game, written when learning Java basics.
