@@ -1,3 +1,3 @@
-# java-hangman
+# number-hangman
 
-A simple console hangman game, written when learning Java basics.
+A simple console number hangman game, written when learning Java basics.
